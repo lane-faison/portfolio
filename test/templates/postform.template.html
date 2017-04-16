@@ -1,0 +1,153 @@
+<div class="col-md-1"></div>
+<div class="col-md-10">
+  <div class="pull-right">
+    <p><a class="btn btn-info" ng-click="isPostFormOpen = !isPostFormOpen">Add Cheat</a></p>
+  </div>
+  <ul class="nav nav-pills">
+    <li role="presentation" class="active">
+      <input ng-model="search.title" type="search" class="form-control input-sm search-form" placeholder="Filter">
+    </li>
+    <li>
+      <div class="form-inline">
+        <select class="form-control" id="sort" ng-model="$ctrl.selected" ng-change="$ctrl.switchSort()">
+          <option value="none">Sort by --</option>
+          <option value="counter">Votes</option>
+          <option value="date">Date</option>
+          <option value="title">Title</option>
+        </select>
+      </div>
+    </li>
+  </ul>
+</div>
+<div class="col-md-1"></div>
+<div class="row" ng-show="isPostFormOpen">
+  <div class="col-md-1"></div>
+  <div class="col-md-8">
+    <form novalidate name='$ctrl.postForm' ng-submit="$ctrl.submitPost($ctrl.post.title, $ctrl.post.body, $ctrl.post.author, $ctrl.post.image)">
+      <div>
+        <label for="title">Cheat Title</label>
+        <input id="title"
+          name="title"
+          type="text"
+          class="form-control"
+          ng-minlength=5
+          ng-maxlength=30
+          ng-class="{
+            'invalid': $ctrl.postForm.title.$invalid && $ctrl.postForm.title.$touched,
+            'valid': $ctrl.postForm.title.$valid && $ctrl.postForm.title.$touched
+          }"
+          ng-model="$ctrl.post.title" required/>
+      </div>
+      <div>
+        <label for="body">Description</label>
+        <textarea id="body"
+          name="body"
+          class="form-control"
+          type="text"
+          ng-minlength=10
+          ng-class="{
+            'invalid': $ctrl.postForm.body.$invalid && $ctrl.postForm.body.$touched,
+            'valid': $ctrl.postForm.body.$valid && $ctrl.postForm.body.$touched
+          }"
+          ng-model="$ctrl.post.body" required/>
+        </textarea>
+      </div>
+      <div>
+        <label for="author">Author</label>
+        <input id="author"
+          name="author"
+          class="form-control"
+          type="text"
+          ng-minlength=5
+          ng-maxlength=30
+          ng-class="{
+            'invalid': $ctrl.postForm.author.$invalid && $ctrl.postForm.author.$touched,
+            'valid': $ctrl.postForm.author.$valid && $ctrl.postForm.author.$touched
+          }"
+          ng-model="$ctrl.post.author" required/>
+      </div>
+      <div>
+        <label for="image">Image URL</label>
+        <!-- The type URL prevents the form validation from working right, so ng-pattern is used -->
+        <input id="image"
+          name="image"
+          class="form-control"
+          ng-pattern="string"
+          ng-class="{
+            'invalid': $ctrl.postForm.image.$invalid && $ctrl.postForm.image.$touched,
+            'valid': $ctrl.postForm.image.$valid && $ctrl.postForm.image.$touched
+          }"
+          ng-model="$ctrl.post.image" required/>
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary btn-post" ng-disabled="$ctrl.postForm.$invalid" ng-click='isPostFormOpen = !isPostFormOpen'>Submit Cheat</button>
+      </div>
+      <div class="errors">
+        <p class='error' ng-if="$ctrl.postForm.title.$invalid && $ctrl.postForm.title.$touched"><span class='error-bold'>* Title</span> must be 5 to 30 characters in length</p>
+        <p class='error' ng-if="$ctrl.postForm.body.$invalid && $ctrl.postForm.body.$touched"><span class='error-bold'>* Body</span> must at least 10 characters in length</p>
+        <p class='error' ng-if="$ctrl.postForm.author.$invalid && $ctrl.postForm.author.$touched"><span class='error-bold'>* Author</span> name must be 5 to 30 characters in length</p>
+      </div>
+    </form>
+  </div>
+  <div class="col-md-3"></div>
+</div>
+<main class="container">
+  <div class="row">
+    <div ng-repeat="post in $ctrl.posts | filter:search:strict | orderBy:$ctrl.sorter" class="col-md-12">
+      <div class="well">
+        <div class="media-left">
+          <img src="{{ post.image }}"class="media-object">
+        </div>
+        <div class="media-body">
+          <h4 class="media-heading h4-counter">
+            {{ post.title }}
+            |
+            <div class="voteCounter">
+              <counter counter='post.counter'></counter>
+            </div>
+          </h4>
+          <div class='author'>
+            By <span class='bold'>{{ post.author }}</span>
+          </div>
+          <p class='body'>
+            {{ post.body }}
+          </p>
+          <div class='time-div'>
+            <p class='bold'>Posted:&nbsp;</p>
+            <div ng-app='timeApp' am-time-ago='post.postTime'>{{ post.postTime }}</div>&nbsp;|&nbsp;
+            <i class="glyphicon glyphicon-comment"></i>
+            &nbsp;
+            <ng-pluralize
+              ng-click="isCommentsOpen = !isCommentsOpen" count="post.comments.length"
+              when="{
+                '0': 'No comments yet',
+                '1': '1 comment',
+                'other': '{} comments'}">
+            </ng-pluralize>
+          </div>
+          <div class="row" ng-show="isCommentsOpen">
+            <div class='col-md-offset-1'>
+              <hr>
+              <h4 class='comment-header' ng-show="post.comments.length > 0">Comments</h4>
+              <div class="comments" ng-repeat="comment in post.comments">
+                <p class='each-comment'>
+                  {{ comment.body }}
+                </p>
+              </div>
+              <form novalidate name='$ctrl.postComment' ng-submit="$ctrl.submitComment(post.id)" class="comment-form form-inline">
+                  <input id='comment'
+                  name='body'
+                  type='text'
+                  class="form-control"
+                  ng-model='$ctrl.comment.body'
+                  ng-minLength = 1
+                  placeholder="Your comment here" required/>
+                  <button type="submit" class="btn btn-primary" ng-disabled="$ctrl.postComment.$invalid">Submit</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

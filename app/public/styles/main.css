@@ -1,0 +1,38 @@
+* {
+  font-family: 'Gill Sans', serif;
+}
+
+body {
+  padding-top: 50px;
+}
+
+/************** NAVBAR **************/
+a.navbar-brand {
+  font-size: 30px;
+}
+
+#name {
+  color: #EA4533;
+}
+
+.navbar-fixed-top {
+  font-size: 18px;
+}
+
+.name-subtitle {
+  color: #fff;
+}
+
+#active {
+  color: #EA4533;
+}
+
+/************** FOOTER **************/
+.navbar-fixed-bottom {
+  color: #EA4533;
+  text-align: center;
+}
+
+#footer {
+  min-height: 25px;
+}

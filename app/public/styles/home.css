@@ -1,0 +1,57 @@
+/************** COVER SECTION **************/
+
+.cover {
+  background: #000;
+}
+
+.cover img {
+  width: 80%;
+  margin: 0 10%;
+  margin: #000;
+}
+
+/************** ABOUT SECTION **************/
+.info {
+  margin: 20px 10%;
+}
+
+.info .thumbnail {
+  background-color: #eee;
+  border: 10px solid #333;
+  padding: 0 10px;
+}
+
+.caption .summaries {
+  color: #333;
+  font-size: 20px;
+  text-align: justify;
+}
+
+.caption .subtitles {
+  color: #333;
+  margin: 20px auto;
+  text-align: left;
+  font-size: 30px;
+  letter-spacing: 0.1em;
+  color: #EA4533;
+  font-weight: bolder;
+}
+
+.tech-logos {
+  height: 50px;
+  width: auto;
+  margin: 10px;
+}
+
+.hovered-fav-tool, .hovered-eager-tool {
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  margin: 40px auto 20px auto;
+}
+
+.tool-name {
+  font-size: 30px;
+  color: #555;
+  font-weight: bold;
+}

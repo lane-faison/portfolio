@@ -1,0 +1,62 @@
+.projects-header {
+  text-align: center;
+}
+.project-row {
+  margin-bottom: 25px;
+  padding: 0;
+}
+
+.sites-row {
+  margin: 0 50px;
+}
+
+.bottom-row {
+  margin-bottom: 200px;
+}
+.project_img {
+  width: 200px;
+  padding-top: 20px;
+}
+
+.projects-title {
+  margin: 20px auto;
+  text-align: center;
+  font-size: 50px;
+  letter-spacing: 0.1em;
+  color: #EA4533;
+  font-weight: bolder;
+}
+
+.col-md-4 .project-thumbnail {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 450px;
+  min-width: 250px;
+  margin-top: 0;
+  background: #fff;
+  border: 10px solid #333;
+  opacity: 0.3;
+}
+
+.col-md-4 .project-thumbnail:hover {
+  background: #fff;
+  opacity: 1;
+}
+
+.project-caption {
+  color: #000;
+  text-align: center;
+}
+
+.project-buttons {
+  display: flex;
+  justify-content: center;
+}
+
+/*** Portfolio Animations ***/
+.moveUp {
+  transform: translateY(-20px);
+  transition-timing-function: ease-out;
+  transition: 0.5s;
+}

@@ -1,6 +1,10 @@
 main {
   margin-bottom: 1500px;
 }
+
+.project-div {
+  margin: auto 5%;
+}
 .projects-title {
   margin: 20px auto;
   text-align: center;
@@ -13,8 +17,8 @@ main {
 .col-md-4 .project-thumbnail {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  height: 450px;
+  justify-content: space-between;
+  height: 500px;
   min-width: 250px;
   background: #fff;
   border: 10px solid #333;
@@ -35,16 +39,18 @@ main {
 .project-caption {
   color: #000;
   text-align: center;
-  margin: auto 20px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .project-caption h3 {
   font-size: 30px;
 }
-.project-description {
-  text-align: justify;
-}
+
 .btn-visit {
   width: 75px;
   font-size: 20px;
+  position: relative;
+  bottom: 15px;
+  margin-top: 20px;
 }

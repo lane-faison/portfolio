@@ -1,3 +1,7 @@
+main {
+  min-width: 510px;
+}
+
 /************** COVER SECTION **************/
 
 .cover {
@@ -37,9 +41,13 @@
   font-weight: bolder;
 }
 
+#skills {
+  min-width: 400px;
+}
+
 .tech-logos {
   height: 50px;
-  width: auto;
+  width: 50px;
   margin: 10px;
 }
 

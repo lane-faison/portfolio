@@ -9,6 +9,7 @@ body {
 /************** NAVBAR **************/
 a.navbar-brand {
   font-size: 30px;
+  min-width: 510px;
 }
 
 #name {

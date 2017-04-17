@@ -1,5 +1,6 @@
 * {
   font-family: 'Gill Sans', serif;
+  font-size: 20px;
 }
 
 body {
@@ -22,6 +23,7 @@ a.navbar-brand {
 
 .name-subtitle {
   color: #fff;
+  font-size: 25px;
 }
 
 #active {
@@ -29,11 +31,11 @@ a.navbar-brand {
 }
 
 /************** FOOTER **************/
-.navbar-fixed-bottom {
-  color: #EA4533;
-  text-align: center;
-}
 
 #footer {
-  min-height: 25px;
+  min-height: 50px;
+  color: #EA4533;
+  text-align: center;
+  vertical-align: middle;
+  padding-top: 10px;
 }

@@ -2,7 +2,7 @@ exports.seed = (knex, Promise) => {
   return knex('projects').del()
     .then( () => {
       return knex('projects').insert([
-        {title: 'gReads A Lot', description: 'This application allows users to interact with and search a database full of authors and books.', image_url:'./images/logos-projects/greads.png', project_url:'https://g-reads-alot.herokuapp.com/index.html'},
+        {title: 'gReads A Lot', description: 'This application allows users to interact with and search a database full of authors and books, as well as create their own authors and books.', image_url:'./images/logos-projects/greads.png', project_url:'https://g-reads-alot.herokuapp.com/index.html'},
 
         {title: 'gDrinks', description: 'This goal of this project was to create an interactive site that allows the user to add, edit, and delete recipes.', image_url:'http://cdn.liquor.com/wp-content/uploads/2012/09/bourbon-old-fashioned.jpg', project_url:'https://gdrinks-d4c1b.firebaseapp.com/index.html'},
 

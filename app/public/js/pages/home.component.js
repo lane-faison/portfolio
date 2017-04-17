@@ -7,7 +7,14 @@
       controller: HomeController
     })
 
-  function HomeController() {
-    //For future home interaction
+  HomeController.$inject = ['$http']
+  function HomeController($http) {
+    const vm = this
+
+    vm.$onInit = function () {
+      $http.get('/tools').then(function (result) {
+        vm.tools = result.data
+      })
+    }
   }
 }())

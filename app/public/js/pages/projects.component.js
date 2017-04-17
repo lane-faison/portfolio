@@ -4,10 +4,18 @@
   angular.module('app')
     .component('projects', {
       templateUrl: './js/templates/projects.html',
-      controller: ProjectsController
+      controller: ProjectController
     })
 
-  function ProjectsController() {
-    //For future projects interaction
+  ProjectController.$inject = ['$http']
+  function ProjectController($http) {
+    const vm = this
+
+    vm.$onInit = function () {
+      $http.get('/projects').then(function (result) {
+        vm.projects = result.data
+        console.log(vm.projects)
+      })
+    }
   }
 }())

@@ -16,24 +16,10 @@
             Lane's first goal is to soak up every ounce of knowledge he can while in the Galvanize program so he is well-prepared to take on a junior developer position upon graduation. This industry requires a never-ending pursuit of knowledge and it continues to evolve year after year. Thus, one of his goals is to keep up with trending technologies while never losing focus on the core tools he is best at. He would also like to be working full-time after graduation on a strong development team where he can learn something new every day from his colleagues. His final goal is to travel to Africa and Southeast Asia within the next 5 years.
           </p>
           <p class="subtitles" id="skills">Tools &amp; Technologies:</p>
-          <!-- <div class="tech-logos-section" ng-repeat="tool in $ctrl.tools"> -->
-            <img ng-repeat="tool in $ctrl.tools" class="tech-logos" src="{{ tool.image_url }}">
-          <!-- </div> -->
-          <!-- <img class="tech-logos" src="./assets/images/logos/html.png" alt="html5 logo" name="fav" title="HTML5">
-          <img class="tech-logos" src="./assets/images/logos/css3.png" alt="css3 logo" name="fav" title="CSS3">
-          <img class="tech-logos" src="./assets/images/logos/js.png" alt="javascript logo" name="fav" title="JavaScript">
-          <img class="tech-logos" src="./assets/images/logos/angular-icon.png" alt="angular logo" name="fav" title="AngularJS">
-          <img class="tech-logos" src="./assets/images/logos/tech-jquery.png" alt="jquery logo" name="fav" title="jQuery">
-          <img class="tech-logos" src="./assets/images/logos/node.png" alt="node logo" name="fav" title="node.js">
-          <img class="tech-logos" src="./assets/images/logos/bootstrap-logo.png" alt="bootstrap logo" name="fav" title="Bootstrap">
-          <img class="tech-logos" src="./assets/images/logos/atom.png" alt="atom logo" name="fav" title="Atom">
-          <img class="tech-logos" src="./assets/images/logos/git.png" alt="git logo" name="fav" title="Git">
-          <img class="tech-logos" src="./assets/images/logos/Octocat.png" alt="github logo" name="fav" title="GitHub">
-          <img class="tech-logos" src="./assets/images/logos/heroku.png" alt="heroku logo" name="fav" title="heroku">
-          <img class="tech-logos" src="./assets/images/logos/balsamiq.png" alt="balsamiq logo" name="fav" title="Balsamiq Mockups 3"> -->
-
-          <div class="hovered-fav-tool"></div>
-
+          <div ng-repeat="tool in $ctrl.tools" class='tech-divs' ng-mouseover="hover = true" ng-mouseleave="hover = false">
+            <img class="tech-logos" src="{{ tool.image_url }}">
+            <p class="tech-name" ng-show="hover">{{ tool.name }}</p>
+          </div>
         </div>
       </div>
     </div>

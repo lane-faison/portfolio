@@ -16,5 +16,13 @@
         vm.tools = result.data
       })
     }
+
+    vm.hoverIn = function () {
+      this.hover = true;
+    }
+
+    vm.hoverOut = function () {
+      this.hover = false;
+    }
   }
 }())

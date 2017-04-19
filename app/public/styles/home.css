@@ -45,21 +45,20 @@ main {
   min-width: 400px;
 }
 
+.tech-divs {
+  display: inline-block;
+  margin-bottom: 50px;
+  text-align: center;
+  height: 100px;
+}
+
 .tech-logos {
   height: 50px;
   width: 50px;
   margin: 10px;
 }
 
-.hovered-fav-tool, .hovered-eager-tool {
-  height: 50px;
-  display: flex;
-  justify-content: center;
-  margin: 40px auto 20px auto;
-}
-
-.tool-name {
-  font-size: 30px;
-  color: #555;
+.tech-name {
+  padding-bottom: 50px;
   font-weight: bold;
 }

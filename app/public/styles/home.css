@@ -2,27 +2,24 @@ main {
   min-width: 510px;
 }
 
-/************** COVER SECTION **************/
-
-.cover {
-  background: #000;
+.main-links a {
+  text-decoration: none;
 }
 
-.cover img {
-  width: 80%;
-  margin: 0 10%;
-  margin: #000;
+.main-links {
+  margin: 80px auto;
 }
 
 /************** ABOUT SECTION **************/
 .info {
-  margin: 20px 10%;
+  margin: 0 10%;
 }
 
 .info .thumbnail {
   background-color: #eee;
   border: 10px solid #333;
   padding: 0 10px;
+  margin-bottom: 0;
 }
 
 .caption .summaries {
@@ -61,4 +58,88 @@ main {
 .tech-name {
   padding-bottom: 50px;
   font-weight: bold;
+}
+
+/*********PROJECT TEST**********/
+.big-L {
+  opacity: 0.5;
+  color: #EA4533;
+  font-size: 250px;
+  font-weight: bold;
+  text-align: center;
+  filter: blur(3.5px);
+  transition: all 0.75s ease-in;
+}
+
+.big-L:hover {
+  opacity: 1;
+  cursor: default;
+  text-decoration: none;
+  filter: blur(0);
+  transform: rotate3d(1, 2, -1, 360deg);
+}
+
+.top-links {
+  color: #EA4533;
+  font-size: 50px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-align: center;
+  filter: blur(1.5px);
+  transition: all 0.75s ease-in;
+}
+
+.top-links:hover {
+  letter-spacing: 100px;
+  cursor: default;
+  text-decoration: none;
+  transform: rotate3d(1, 0, 0, 360deg);
+  filter: blur(0);
+}
+
+.section-box {
+  width: 100%;
+  height: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#about {
+  margin-top: 500px
+}
+
+#tool-belt {
+  margin-top: 500px
+  margin-bottom: 500px;
+}
+
+#tool-belt-thumbnail {
+  min-height: 350px;
+}
+
+#projects {
+  margin-top: 200px;
+}
+
+/************** COVER FOOTER SECTION **************/
+
+.cover {
+  background: #000;
+  position: relative;
+}
+
+.cover img {
+  width: 100%;
+  margin: #000;
+}
+
+.text-over-image {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  color: #EA4533;
+  font-size: 30px;
 }

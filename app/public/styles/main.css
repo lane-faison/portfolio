@@ -5,6 +5,9 @@
 
 body {
   padding-top: 50px;
+  background-image: url('../images/other/flatirons-min.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 /************** NAVBAR **************/
@@ -30,12 +33,14 @@ a.navbar-brand {
   color: #EA4533;
 }
 
-/************** FOOTER **************/
-
-#footer {
-  min-height: 50px;
-  color: #EA4533;
+/************* SCROLLERS **************/
+.chevrons {
+  color: rgba(234, 70, 52, 0.5);
+  font-size: 50px;
   text-align: center;
-  vertical-align: middle;
-  padding-top: 10px;
+  transition: all 0.5s ease-in;
+}
+
+.chevrons:hover {
+  color: rgba(234, 70, 52, 0.9);
 }

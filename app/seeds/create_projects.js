@@ -3,7 +3,7 @@ exports.seed = (knex, Promise) => {
     .then( () => {
       return knex('projects').insert([
 
-        {title: 'Mario Kart Cheats!', description: 'This AngularJS application allows users to quickly interact with the various posts on the site. Users are able to search and filter results as well as vote on the posts.', image_url:'./images/logos-projects/mariokart.png', project_url:'https://mario-kart-cheats.herokuapp.com/'},
+        {title: 'Mario Kart Cheats!', description: 'This AngularJS application lets users quickly interact with the various posts on the site. Users can search and filter results as well as vote on a post.', image_url:'./images/logos-projects/mariokart.png', project_url:'https://mario-kart-cheats.herokuapp.com/'},
 
         {title: 'gReads A Lot', description: 'This application allows users to interact with and search a database full of authors and books, as well as create their own authors and books.', image_url:'./images/logos-projects/greads.png', project_url:'https://g-reads-alot.herokuapp.com/index.html'},
 

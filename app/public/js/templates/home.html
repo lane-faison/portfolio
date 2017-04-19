@@ -1,28 +1,80 @@
 <main>
-  <div class="row">
-    <div class="cover">
-      <img src="./images/other/canyonlands.jpg">
+  <div class="section-box" id="links">
+    <p>ENTER</p>
+    <p class="big-L" ng-show="!isBigLVisible" ng-click="isBigLVisible = !isBigLVisible">LF</p>
+    <div class="main-links" ng-show="isBigLVisible">
+      <p du-smooth-scroll="about" duration="1500" class="top-links">ABOUT LANE</p>
+      <p du-smooth-scroll="tool-belt" duration="2000" class="top-links">TOOL BELT</p>
+      <p du-smooth-scroll="projects" duration="2000" class="top-links">PROJECTS</p>
+      <a ui-sref="resume"><p class="top-links">RESUME</p></a>
+      <a ui-sref="contact"><p class="top-links">CONTACT</p></a>
     </div>
+  </div>
+  <div  ng-show="isBigLVisible" class="row">
+    <!-- <div class="cover">
+      <img src="./images/other/flatirons-min.jpg">
+    </div> -->
     <div class="info col-md-1"></div>
     <div class="info md-10">
-      <div class="thumbnail">
-        <div class="caption">
-          <p class="subtitles">About Lane</p class="subtitles">
-          <p class="summaries">
-            Lane Faison is a full-stack web developer currently studying at Galvanize in Denver, Colorado. Lane is a United States Marine Corps veteran and a graduate of the University of Colorado at Boulder with a degree in Mathematics. After college, Lane spent 18 months in the IT industry working as a technical recruiter. During that time he was exposed to a world of exciting and incredibly innovative companies. Wanting to be a part of the IT movement, Lane left the recruiting world to take on the six-month immersive web developer program at Galvanize.
-          </p>
-          <p class="subtitles">Goals</p class="subtitles">
-          <p class="summaries">
-            Lane's first goal is to soak up every ounce of knowledge he can while in the Galvanize program so he is well-prepared to take on a junior developer position upon graduation. This industry requires a never-ending pursuit of knowledge and it continues to evolve year after year. Thus, one of his goals is to keep up with trending technologies while never losing focus on the core tools he is best at. He would also like to be working full-time after graduation on a strong development team where he can learn something new every day from his colleagues. His final goal is to travel to Africa and Southeast Asia within the next 5 years.
-          </p>
-          <p class="subtitles" id="skills">Tools &amp; Technologies:</p>
-          <div ng-repeat="tool in $ctrl.tools" class='tech-divs' ng-mouseover="hover = true" ng-mouseleave="hover = false">
-            <img class="tech-logos" src="{{ tool.image_url }}">
-            <p class="tech-name" ng-show="hover">{{ tool.name }}</p>
+      <div class="section-box" id="about">
+        <span du-smooth-scroll="links" duration="1500" class="chevrons glyphicon glyphicon-chevron-up" aria-hidden="true"></span>
+        <div class="thumbnail">
+          <div class="caption">
+            <p class="subtitles">About Lane</p class="subtitles">
+            <p class="summaries">
+              Lane Faison is a full-stack web developer currently studying at Galvanize in Denver, Colorado. Lane is a United States Marine Corps veteran and a graduate of the University of Colorado at Boulder with a degree in Mathematics. After college, Lane spent 18 months in the IT industry working as a technical recruiter. During that time he was exposed to a world of exciting and incredibly innovative companies. Wanting to be a part of the IT movement, Lane left the recruiting world to take on the six-month immersive web developer program at Galvanize.
+            </p>
+            <p class="subtitles">Goals</p class="subtitles">
+            <p class="summaries">
+              Lane's first goal is to soak up every ounce of knowledge he can while in the Galvanize program so he is well-prepared to take on a junior developer position upon graduation. This industry requires a never-ending pursuit of knowledge and it continues to evolve year after year. Thus, one of his goals is to keep up with trending technologies while never losing focus on the core tools he is best at. He would also like to be working full-time after graduation on a strong development team where he can learn something new every day from his colleagues. His final goal is to travel to Africa and Southeast Asia within the next 5 years.
+            </p>
           </div>
         </div>
+        <span du-smooth-scroll="tool-belt" duration="1500" class="chevrons glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
+      </div>
+      <div class="section-box" id="tool-belt">
+        <span du-smooth-scroll="links" duration="1500" class="chevrons glyphicon glyphicon-chevron-up" aria-hidden="true"></span>
+        <div class="thumbnail" id="tool-belt-thumbnail">
+          <div class="caption">
+            <p class="subtitles" id="skills">Tool Belt:</p>
+            <div ng-repeat="tool in $ctrl.tools" class='tech-divs' ng-mouseover="hover = true" ng-mouseleave="hover = false">
+              <img class="tech-logos" src="{{ tool.image_url }}">
+              <p class="tech-name" ng-show="hover">{{ tool.name }}</p>
+            </div>
+          </div>
+        </div>
+        <span du-smooth-scroll="projects" duration="1500" class="chevrons glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
       </div>
     </div>
     <div class="info col-md-1"></div>
+  </div>
+  <!-- <div class="cover">
+    <img src="./images/other/presentation.png">
+  </div> -->
+  <div ng-show="isBigLVisible" class="chevrons">
+    <span du-smooth-scroll="links" duration="1500" class="chevrons glyphicon glyphicon-chevron-up"  id="projects" aria-hidden="true"></span>
+  </div>
+  <div ng-show="isBigLVisible" class="project-section">
+    <section class="projects-title">My Projects</section>
+    <div class='project-div'>
+      <div ng-repeat="project in $ctrl.projects" class="col-md-4">
+          <div class="thumbnail project-thumbnail">
+            <a class='no-decoration' ng-href="{{ project.project_url}}">
+              <img class="project_img" src="{{ project.image_url }}">
+            </a>
+            <div class="project-caption">
+              <h3 class="no-decoration">{{ project.title }}</h3>
+              <p class="project-description no-decoration">{{ project.description }}</p>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+  <div ng-show="isBigLVisible" class="cover">
+    <img src="./images/other/presentation.png">
+    <div du-smooth-scroll="links" duration="1000" class="text-over-image">
+      <span class="chevrons glyphicon glyphicon-chevron-up" aria-hidden="true"></span>
+      <p>Back to Top</p>
+    </div>
   </div>
 </main>

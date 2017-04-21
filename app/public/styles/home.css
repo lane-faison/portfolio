@@ -61,13 +61,41 @@ main {
 }
 
 /*********PROJECT TEST**********/
-.big-L {
-  opacity: 0.5;
+.header-div {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  position: fixed;
+  z-index: -1;
+  transition: all 10s ease-in;
+}
+
+.header-div.link-clicked {
+  justify-content: space-between;
+  color: #000;
+}
+
+
+
+.header-name {
+  opacity: 1;
   color: #EA4533;
-  font-size: 250px;
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.name-subtitle {
+  font-size: 30px;
+}
+
+.big-L {
+  opacity: 0.8;
+  color: #EA4533;
+  font-size: 50px;
   font-weight: bold;
   text-align: center;
-  filter: blur(3.5px);
+  filter: blur(1.5px);
   transition: all 0.75s ease-in;
 }
 
@@ -76,7 +104,7 @@ main {
   cursor: url('http://www.pngall.com/wp-content/uploads/2016/05/Click-Download-PNG.png'), default;
   text-decoration: none;
   filter: blur(0);
-  transform: rotate3d(1, 2, -1, 360deg);
+  transform: rotate3d(1, 0, 0, 360deg);
 }
 
 .top-links {

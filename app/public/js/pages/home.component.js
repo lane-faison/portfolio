@@ -33,5 +33,6 @@
       $location.hash('about')
       $anchorScroll
     }
+
   }
 }())

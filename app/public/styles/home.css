@@ -74,8 +74,19 @@ main {
 .header-div.link-clicked {
   justify-content: space-between;
   color: #000;
+  top: 200px;
 }
 
+.left-tilt {
+  transform: rotate(-90deg);
+  left: 0;
+  margin-left: 0;
+}
+
+.right-tilt {
+  transform: rotate(90deg);
+  right: 0;
+}
 
 
 .header-name {
@@ -86,7 +97,8 @@ main {
 }
 
 .name-subtitle {
-  font-size: 30px;
+  font-size: 25px;
+  font-weight: bold;
 }
 
 .big-L {

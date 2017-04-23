@@ -77,13 +77,13 @@ main {
   top: 200px;
 }
 
-.left-tilt {
+.left-title {
   transform: rotate(-90deg);
   left: 0;
   margin-left: 0;
 }
 
-.right-tilt {
+.right-title {
   transform: rotate(90deg);
   right: 0;
 }
@@ -120,12 +120,13 @@ main {
 }
 
 .top-links {
-  color: #EA4533;
+  /*color: #EA4533;*/
+  color: #fff;
   font-size: 50px;
   font-weight: bold;
   letter-spacing: 2px;
   text-align: center;
-  filter: blur(1.5px);
+  filter: blur(0.5px);
   transition: all 0.75s ease-in;
 }
 

@@ -61,6 +61,20 @@ main {
 }
 
 /*********PROJECT TEST**********/
+.opening {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.opening-header {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  cursor: url('http://www.freeiconspng.com/uploads/white-mouse-cursor-arrow-by-qubodup-11.png'), default;
+}
+
 .header-div {
   width: 100%;
   display: flex;
@@ -71,21 +85,20 @@ main {
   transition: all 10s ease-in;
 }
 
-.header-div.link-clicked {
+/*.header-div.link-clicked {
   justify-content: space-between;
   color: #000;
   top: 200px;
+}*/
+
+.header-name.left-title {
+  left: -100%;
+  color: #000;
 }
 
-.left-title {
-  transform: rotate(-90deg);
-  left: 0;
-  margin-left: 0;
-}
-
-.right-title {
-  transform: rotate(90deg);
-  right: 0;
+.name-subtitle.right-title {
+  right: 100%;
+  color: #000;
 }
 
 

@@ -4,10 +4,11 @@
     <p ng-class="rightTitle" class='name-subtitle'>Full Stack Web Developer</p>
   </div>
   <div class="section-box" id="links">
-    <p class="big-L" ng-show="!isBigLVisible" ng-click="isBigLVisible = !isBigLVisible">LANE FAISON <span class='name-subtitle'>Full Stack Web Developer</span></p>
-
-    <!-- Separate above line and zoom the FSWD part in from the right using -100px right or something -->
-
+    <div class="opening-header" ng-show="!isBigLVisible" ng-click="isBigLVisible = !isBigLVisible">
+      <p ng-class="leftTitle" class="header-name">LANE FAISON</p>
+      <p ng-class="rightTitle" class='name-subtitle'>Full Stack Web Developer</p>
+    </div>
+    <p>Enter</p>
     <div class="main-links" ng-show="isBigLVisible">
 
       <p ng-click="myHeader='link-clicked'" du-smooth-scroll="about" duration="1500" class="top-links">STORY</p>

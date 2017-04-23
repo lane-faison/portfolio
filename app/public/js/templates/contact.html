@@ -1,7 +1,6 @@
 <main>
   <div class="contact-container container">
-    <p class="thanks">Thank you for visiting my web page. If you would like to contact me, please click the button below to reach out via email. Also provided are links to my LinkedIn and GitHub.</p>
-    <input id="email-btn" class="btn btn-primary" type="button" value="Email"/>
+    <p class="thanks">Thank you for taking the time to visit and I hope you have enjoyed my portfolio. If you would like to contact me, please feel free to reach out! You may also connect with me on LinkedIn and/or Github using the links below.</p>
     <div class="links">
       <a href="https://www.linkedin.com/in/lanefaison/">
         <img class="tech-logos" src="./images/logos-tech/LI.png">
@@ -10,8 +9,12 @@
         <img class="tech-logos" src="./images/logos-tech/GitHub-Mark.png">
       </a>
     </div>
-  </div>
-  <div class="cover">
-    <img src="./images/other/presentation.png">
+    <form class="email-form" method="POST" action="http://formspree.io/lane.faison@icloud.com">
+      <input class="form-item" type="text" name="name" placeholder="Your name" required>
+      <input class="form-item" type="email" name="email" placeholder="Your email" required>
+      <textarea class="form-item" name="message" placeholder="Your message"required></textarea>
+      <button class="form-item btn btn-success" type="submit">Send</button>
+      <button class="form-item btn btn-danger" type="button" ui-sref="home">Return to home</button>
+    </form>
   </div>
 </main>

@@ -72,7 +72,11 @@ main {
   display: flex;
   justify-content: center;
   align-items: baseline;
-  cursor: url('http://www.freeiconspng.com/uploads/white-mouse-cursor-arrow-by-qubodup-11.png'), default;
+}
+
+.opening-enter {
+  color: #fff;
+  background: #EA4533;
 }
 
 .header-div {

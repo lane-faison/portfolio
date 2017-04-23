@@ -33,6 +33,7 @@
 
 .col-md-4 .project-thumbnail:hover {
   border: 10px solid #EA4533;
+  transform: translateY(-20px);
 }
 
 .project_img {

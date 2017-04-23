@@ -4,11 +4,13 @@
     <p ng-class="rightTitle" class='name-subtitle'>Full Stack Web Developer</p>
   </div>
   <div class="section-box" id="links">
-    <div class="opening-header" ng-show="!isBigLVisible" ng-click="isBigLVisible = !isBigLVisible">
-      <p ng-class="leftTitle" class="header-name">LANE FAISON</p>
-      <p ng-class="rightTitle" class='name-subtitle'>Full Stack Web Developer</p>
+    <div class="opening">
+      <div class="opening-header" ng-show="!isBigLVisible">
+        <p ng-class="leftTitle" class="header-name">LANE FAISON</p>
+        <p ng-class="rightTitle" class='name-subtitle'>Full Stack Web Developer</p>
+      </div>
+      <button class="opening-enter btn" type="button" name="button" ng-show="!isBigLVisible" ng-click="isBigLVisible = !isBigLVisible">Enter</button>
     </div>
-    <p>Enter</p>
     <div class="main-links" ng-show="isBigLVisible">
 
       <p ng-click="myHeader='link-clicked'" du-smooth-scroll="about" duration="1500" class="top-links">STORY</p>
@@ -32,7 +34,7 @@
           <div class="caption">
             <p class="subtitles">About Lane</p class="subtitles">
             <p class="summaries">
-              Lane Faison is a full-stack web developer currently studying at Galvanize in Denver, Colorado. Lane is a United States Marine Corps veteran and a graduate of the University of Colorado at Boulder with a degree in Mathematics. After college, Lane spent 18 months in the IT industry working as a technical recruiter. During that time he was exposed to a world of exciting and incredibly innovative companies. Wanting to be a part of the IT movement, Lane left the recruiting world to take on the six-month immersive web developer program at Galvanize.
+              Lane Faison is a full-stack web developer currently studying at Galvanize Inc. in Denver, Colorado. Lane is a United States Marine Corps veteran and a graduate of the University of Colorado at Boulder with a degree in Mathematics. After college, Lane spent 18 months in the IT industry working as a technical recruiter. During that time he was exposed to a world of exciting and incredibly innovative companies. Wanting to be a part of the IT movement, Lane left the recruiting world to take on the six-month immersive web developer program at Galvanize.
             </p>
             <p class="subtitles">Goals</p class="subtitles">
             <p class="summaries">

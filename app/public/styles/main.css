@@ -16,29 +16,6 @@ body {
   background-color:
 }
 
-/************** NAVBAR **************/
-a.navbar-brand {
-  font-size: 30px;
-  min-width: 510px;
-}
-
-#name {
-  color: #EA4533;
-}
-
-.navbar-fixed-top {
-  font-size: 18px;
-}
-
-.name-subtitle {
-  color: #fff;
-  font-size: 25px;
-}
-
-#active {
-  color: #EA4533;
-}
-
 /************* SCROLLERS **************/
 .chevrons {
   color: rgba(234, 70, 52, 0.5);

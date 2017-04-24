@@ -2,6 +2,58 @@ main {
   min-width: 510px;
 }
 
+.section-box {
+  width: 100%;
+  height: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/************** OPENING HEADER SECTION **************/
+.opening {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.opening-header {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+}
+
+.opening-enter {
+  color: #fff;
+  background: #EA4533;
+}
+
+/************** MAIN HEADER SECTION **************/
+.header-div {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  position: fixed;
+  z-index: -1;
+  transition: all 10s ease-in;
+}
+
+.header-name {
+  opacity: 1;
+  color: #EA4533;
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.name-subtitle {
+  color: #fff;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+/************** MAIN LINKS SECTION **************/
 .main-links a {
   text-decoration: none;
 }
@@ -10,7 +62,29 @@ main {
   margin: 80px auto;
 }
 
+.top-links {
+  color: #fff;
+  font-size: 50px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-align: center;
+  filter: blur(0.5px);
+  transition: all 0.75s ease-in;
+}
+
+.top-links:hover {
+  letter-spacing: 100px;
+  cursor: default;
+  text-decoration: none;
+  filter: blur(0);
+}
+
 /************** ABOUT SECTION **************/
+#about {
+  margin-top: 500px;
+  padding: 30px;
+}
+
 .info {
   margin: 0 10%;
 }
@@ -38,15 +112,27 @@ main {
   font-weight: bolder;
 }
 
-#skills {
-  min-width: 400px;
+/************** TOOLS SECTION **************/
+#tool-belt {
+  margin-top: 500px
+  margin-bottom: 500px;
 }
 
-.tech-divs {
-  display: inline-block;
-  margin-bottom: 50px;
-  text-align: center;
-  height: 100px;
+#tool-belt-thumbnail {
+  min-height: 350px;
+  padding: 30px;
+}
+
+#skills {
+  min-width: 400px;
+  padding-top: 0;
+  margin-top: 0;
+}
+
+.each-tool {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .tech-logos {
@@ -56,131 +142,11 @@ main {
 }
 
 .tech-name {
-  padding-bottom: 50px;
   font-weight: bold;
-}
-
-/*********PROJECT TEST**********/
-.opening {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.opening-header {
-  display: flex;
-  justify-content: center;
-  align-items: baseline;
-}
-
-.opening-enter {
-  color: #fff;
-  background: #EA4533;
-}
-
-.header-div {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: baseline;
-  position: fixed;
-  z-index: -1;
-  transition: all 10s ease-in;
-}
-
-/*.header-div.link-clicked {
-  justify-content: space-between;
-  color: #000;
-  top: 200px;
-}*/
-
-.header-name.left-title {
-  left: -100%;
-  color: #000;
-}
-
-.name-subtitle.right-title {
-  right: 100%;
-  color: #000;
-}
-
-
-.header-name {
-  opacity: 1;
-  color: #EA4533;
-  font-size: 50px;
-  font-weight: bold;
-}
-
-.name-subtitle {
-  font-size: 25px;
-  font-weight: bold;
-}
-
-.big-L {
-  opacity: 0.8;
-  color: #EA4533;
-  font-size: 50px;
-  font-weight: bold;
-  text-align: center;
-  filter: blur(1.5px);
-  transition: all 0.75s ease-in;
-}
-
-.big-L:hover {
-  opacity: 1;
-  cursor: url('http://www.pngall.com/wp-content/uploads/2016/05/Click-Download-PNG.png'), default;
-  text-decoration: none;
-  filter: blur(0);
-  transform: rotate3d(1, 0, 0, 360deg);
-}
-
-.top-links {
-  /*color: #EA4533;*/
-  color: #fff;
-  font-size: 50px;
-  font-weight: bold;
-  letter-spacing: 2px;
-  text-align: center;
-  filter: blur(0.5px);
-  transition: all 0.75s ease-in;
-}
-
-.top-links:hover {
-  letter-spacing: 100px;
-  cursor: default;
-  text-decoration: none;
-  filter: blur(0);
-}
-
-.section-box {
-  width: 100%;
-  height: 800px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-#about {
-  margin-top: 500px
-}
-
-#tool-belt {
-  margin-top: 500px
-  margin-bottom: 500px;
-}
-
-#tool-belt-thumbnail {
-  min-height: 350px;
-}
-
-#projects {
-  margin-top: 200px;
+  margin-left: 25px;
 }
 
 /************** COVER FOOTER SECTION **************/
-
 .cover {
   background: #000;
   position: relative;

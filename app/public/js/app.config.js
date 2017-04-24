@@ -14,11 +14,6 @@
         component: 'home',
       })
       .state({
-        name: 'portfolio',
-        url: '/portfolio',
-        component: 'projects',
-      })
-      .state({
         name: 'resume',
         url: '/resume',
         component: 'resume',

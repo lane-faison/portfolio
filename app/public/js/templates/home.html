@@ -1,31 +1,25 @@
 <main>
-  <div ng-class="myHeader" class="header-div" ng-show="isBigLVisible" ng-click="isBigLVisible = !isBigLVisible">
-    <p ng-class="leftTitle" class="header-name">LANE FAISON</p>
-    <p ng-class="rightTitle" class='name-subtitle'>Full Stack Web Developer</p>
+  <div ng-class="myHeader" class="header-div" ng-show="isOpeningVisible" ng-click="isOpeningVisible = !isOpeningVisible">
+    <p class="header-name">LANE FAISON</p>
+    <p class='name-subtitle'>Full Stack Web Developer</p>
   </div>
   <div class="section-box" id="links">
     <div class="opening">
-      <div class="opening-header" ng-show="!isBigLVisible">
-        <p ng-class="leftTitle" class="header-name">LANE FAISON</p>
-        <p ng-class="rightTitle" class='name-subtitle'>Full Stack Web Developer</p>
+      <div class="opening-header" ng-show="!isOpeningVisible">
+        <p class="header-name">LANE FAISON</p>
+        <p class='name-subtitle'>Full Stack Web Developer</p>
       </div>
-      <button class="opening-enter btn" type="button" name="button" ng-show="!isBigLVisible" ng-click="isBigLVisible = !isBigLVisible">Enter</button>
+      <button class="opening-enter btn" type="button" name="button" ng-show="!isOpeningVisible" ng-click="isOpeningVisible = !isOpeningVisible">Enter</button>
     </div>
-    <div class="main-links" ng-show="isBigLVisible">
-
-      <p ng-click="myHeader='link-clicked'" du-smooth-scroll="about" duration="1500" class="top-links">STORY</p>
-
-      <p ng-click="myHeader='link-clicked'" du-smooth-scroll="tool-belt" duration="2000" class="top-links">TOOL BELT</p>
-
-      <p ng-click="myHeader='link-clicked'" du-smooth-scroll="projects" duration="2000" class="top-links">PROJECTS</p>
-
+    <div class="main-links" ng-show="isOpeningVisible">
+      <p du-smooth-scroll="about" duration="1500" class="top-links">STORY</p>
+      <p du-smooth-scroll="tool-belt" duration="2000" class="top-links">TOOL BELT</p>
+      <p du-smooth-scroll="projects" duration="2000" class="top-links">PROJECTS</p>
       <a ui-sref="resume"><p class="top-links">RESUME</p></a>
-
       <a ui-sref="contact"><p class="top-links">CONTACT</p></a>
-
     </div>
   </div>
-  <div  ng-show="isBigLVisible" class="row">
+  <div  ng-show="isOpeningVisible" class="row">
     <div class="info col-md-1"></div>
     <div class="info md-10">
       <div class="section-box" id="about">
@@ -49,9 +43,11 @@
         <div class="thumbnail" id="tool-belt-thumbnail">
           <div class="caption">
             <p class="subtitles" id="skills">Tool Belt:</p>
-            <div ng-repeat="tool in $ctrl.tools" class='tech-divs' ng-mouseover="hover = true" ng-mouseleave="hover = false">
-              <img class="tech-logos" src="{{ tool.image_url }}">
-              <p class="tech-name" ng-show="hover">{{ tool.name }}</p>
+            <div ng-repeat="tool in $ctrl.tools">
+              <div class="col-md-4 each-tool">
+                <img class="tech-logos" src="{{ tool.image_url }}">
+                <p class="tech-name">{{ tool.name }}</p>
+              </div>
             </div>
           </div>
         </div>
@@ -60,13 +56,10 @@
     </div>
     <div class="info col-md-1"></div>
   </div>
-  <!-- <div class="cover">
-    <img src="./images/other/presentation.png">
-  </div> -->
-  <div ng-show="isBigLVisible" class="chevrons">
+  <div ng-show="isOpeningVisible" class="chevrons">
     <span du-smooth-scroll="links" duration="1500" class="chevrons glyphicon glyphicon-chevron-up"  id="projects" aria-hidden="true"></span>
   </div>
-  <div ng-show="isBigLVisible" class="project-section">
+  <div ng-show="isOpeningVisible" class="project-section">
     <section class="projects-title">My Projects</section>
     <div class='project-div'>
       <div ng-repeat="project in $ctrl.projects" class="col-md-4">
@@ -82,7 +75,7 @@
       </div>
     </div>
   </div>
-  <div ng-show="isBigLVisible" class="cover">
+  <div ng-show="isOpeningVisible" class="cover">
     <img src="./images/other/presentation.png">
     <div du-smooth-scroll="links" duration="1000" class="text-over-image">
       <span class="chevrons glyphicon glyphicon-chevron-up" aria-hidden="true"></span>

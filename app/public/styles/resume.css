@@ -1,3 +1,29 @@
+.resume-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.header-resume {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+}
+
+.header-name {
+  opacity: 1;
+  color: #EA4533;
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.header-subtitle {
+  color: #fff;
+  font-size: 25px;
+  font-weight: bold;
+}
+
 .resume-container {
   display: flex;
   justify-content: center;

@@ -7,7 +7,7 @@
       controller: HomeController
     })
 
-  HomeController.$inject = ['$http','$location','$anchorScroll']
+  HomeController.$inject = ['$http']
   function HomeController($http,$location,$anchorScroll) {
     const vm = this
 
@@ -17,22 +17,7 @@
       })
       $http.get('/projects').then(function (result) {
         vm.projects = result.data
-        console.log(vm.projects)
       })
     }
-
-    vm.hoverIn = function () {
-      this.hover = true;
-    }
-
-    vm.hoverOut = function () {
-      this.hover = false;
-    }
-
-    vm.gotoAbout = function () {
-      $location.hash('about')
-      $anchorScroll
-    }
-
   }
 }())
